@@ -1,9 +1,10 @@
 {
-  "name": "react-player-hls",
+  "name": "@gumlet/react-player-hls",
   "version": "1.0.0",
-  "description": "Comonent to allow video playback using HLS.JS in react",
+  "description": "Component for video playback using HLS.js in react",
   "main": "./dist/index.js",
   "types": "./dist",
+  "files": "./dist/*",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --config webpack/webpack.dev.js",
@@ -21,12 +22,12 @@
     "react",
     "component"
   ],
-  "author": "Aditya Patadia",
+  "author": "Gumlet",
   "license": "MIT",
   "bugs": {
     "url": "https://www.gumlet.com/contact/"
   },
-  "homepage": "https://docs.gumlet.com/docs/",
+  "homepage": "https://github.com/gumlet/react-player-hls",
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
