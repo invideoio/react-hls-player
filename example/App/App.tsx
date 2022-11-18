@@ -6,7 +6,7 @@ function App() {
   const playerRef = useRef<HTMLVideoElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [hlsUrl, setHlsUrl] = useState(
-    'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8'
+    'https://video.gumlet.io/5f462c1561cf8a766464ffc4/635789f017629894d4d125a4/main.m3u8'
   );
   const [destroy, setDestroy] = useState(false);
 

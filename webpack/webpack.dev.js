@@ -11,9 +11,7 @@ module.exports = merge(config, {
     port: 8000,
     open: true,
     historyApiFallback: true,
-    contentBase: 'public',
     host: '0.0.0.0',
-    public: 'localhost:8000',
   },
   plugins: [
     new HtmlWebpackPlugin({

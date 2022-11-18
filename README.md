@@ -1,13 +1,13 @@
-# React HLS Player
+# React Player HLS
 
-![NPM Downloads](https://img.shields.io/npm/dm/react-hls-player?style=flat-square)
+<!-- ![NPM Downloads](https://img.shields.io/npm/dm/react-player-hls?style=flat-square)
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/react-hls-player)
-![npm bundle size](https://img.shields.io/bundlephobia/min/react-hls-player)
+![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/react-player-hls)
+![npm bundle size](https://img.shields.io/bundlephobia/min/react-player-hls) -->
 
 ## Introduction
 
-`react-hls-player` is a simple HLS live stream player.
+`react-player-hls` is a simple HLS live stream player.
 It uses [hls.js](https://github.com/video-dev/hls.js) to play your hls live stream if your browser supports `html 5 video` and `MediaSource Extension`.
 
 ## Examples
@@ -17,11 +17,11 @@ It uses [hls.js](https://github.com/video-dev/hls.js) to play your hls live stre
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactHlsPlayer from 'react-hls-player';
+import ReactHlsPlayer from 'react-player-hls';
 
 ReactDOM.render(
   <ReactHlsPlayer
-    src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+    src="https://video.gumlet.io/5f462c1561cf8a766464ffc4/635789f017629894d4d125a4/main.m3u8"
     autoPlay={false}
     controls={true}
     width="100%"
@@ -38,11 +38,11 @@ All available config properties can be found on the [Fine Tuning](https://github
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactHlsPlayer from 'react-hls-player';
+import ReactHlsPlayer from 'react-player-hls';
 
 ReactDOM.render(
   <ReactHlsPlayer
-    src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+    src="https://video.gumlet.io/5f462c1561cf8a766464ffc4/635789f017629894d4d125a4/main.m3u8"
     hlsConfig={{
       maxLoadingDelay: 4,
       minAutoBitrate: 0,
@@ -59,7 +59,7 @@ The `playerRef` returns a ref to the underlying video component, and as such wil
 
 ```javascript
 import React from 'react';
-import ReactHlsPlayer from 'react-hls-player';
+import ReactHlsPlayer from 'react-player-hls';
 
 function MyCustomComponent() {
   const playerRef = React.useRef();
@@ -79,7 +79,7 @@ function MyCustomComponent() {
   return (
     <ReactHlsPlayer
       playerRef={playerRef}
-      src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+      src="https://video.gumlet.io/5f462c1561cf8a766464ffc4/635789f017629894d4d125a4/main.m3u8"
     />
   );
 }
@@ -91,7 +91,7 @@ You can also listen to events of the video
 
 ```javascript
 import React from 'react';
-import ReactHlsPlayer from 'react-hls-player';
+import ReactHlsPlayer from 'react-player-hls';
 
 function MyCustomComponent() {
   const playerRef = React.useRef();
@@ -119,7 +119,7 @@ function MyCustomComponent() {
   return (
     <ReactHlsPlayer
       playerRef={playerRef}
-      src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+      src="https://video.gumlet.io/5f462c1561cf8a766464ffc4/635789f017629894d4d125a4/main.m3u8"
     />
   );
 }
@@ -141,27 +141,6 @@ All [video properties](https://www.w3schools.com/tags/att_video_poster.asp) are 
 | hlsConfig `Object`       | `hls.js` config, you can see all config [here](https://github.com/video-dev/hls.js/blob/master/docs/API.md#fine-tuning) |
 | playerRef `React Ref`    | Pass in your own ref to interact with the video player directly. This will override the default ref.                    |
 
-### Additional Notes
-
-By default, the HLS config will have `enableWorker` set to `false`. There have been issues with the HLS.js library that breaks some React apps, so I've disabled it to prevent people from running in to this issue. If you want to enable it and see if it works with your React app, you can simply pass in `enableWorker: true` to the `hlsConfig` prop object. [See this issue for more information](https://github.com/video-dev/hls.js/issues/2064)
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://www.marcochavez.info/"><img src="https://avatars0.githubusercontent.com/u/43889446?v=4" width="100px;" alt=""/><br /><sub><b>Marco Chavez</b></sub></a><br /><a href="https://github.com/devcshort/react-hls/commits?author=mxrcochxvez" title="Code">💻</a></td>
-    <td align="center"><a href="https://www.chrisrshort.com"><img src="https://avatars3.githubusercontent.com/u/13677134?v=4" width="100px;" alt=""/><br /><sub><b>Chris Short</b></sub></a><br /><a href="https://github.com/devcshort/react-hls/commits?author=devcshort" title="Code">💻</a> <a href="#projectManagement-devcshort" title="Project Management">📆</a></td>
-  </tr>
-</table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
