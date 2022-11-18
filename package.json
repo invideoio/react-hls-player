@@ -12,6 +12,7 @@
     "prepublishOnly": "npm run build",
     "prepare": "install-peers"
   },
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gumlet/react-player-hls.git"
