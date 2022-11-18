@@ -17,8 +17,6 @@ jobs:
     - name: Build
       run: |
         npm ci
-        npm run build
         npm publish
       env:
-        NODE_ENV: "production"
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
