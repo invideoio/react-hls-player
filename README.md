@@ -1,15 +1,15 @@
 # React Player HLS
 
-![NPM Downloads](https://img.shields.io/npm/dm/@gumlet/react-player-hls?style=flat-square)
-![npm bundle size](https://img.shields.io/bundlephobia/min/@gumlet/react-player-hls)
+![NPM Downloads](https://img.shields.io/npm/dm/@gumlet/react-hls-player?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/min/@gumlet/react-hls-player)
 
 ## Introduction
 
-`react-player-hls` is a simple HLS live stream player.
+`@gumlet/react-hls-player` is a simple HLS live stream player.
 It uses [hls.js](https://github.com/video-dev/hls.js) to play your hls live stream if your browser supports `html 5 video` and `MediaSource Extension`.
 
 ```bash
-npm i @gumlet/react-player-hls
+npm i @gumlet/react-hls-player
 ```
 
 ## Examples
@@ -19,7 +19,7 @@ npm i @gumlet/react-player-hls
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactHlsPlayer from '@gumlet/react-player-hls';
+import ReactHlsPlayer from '@gumlet/react-hls-player';
 
 ReactDOM.render(
   <ReactHlsPlayer
@@ -40,7 +40,7 @@ All available config properties can be found on the [Fine Tuning](https://github
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactHlsPlayer from '@gumlet/react-player-hls';
+import ReactHlsPlayer from '@gumlet/react-hls-player';
 
 ReactDOM.render(
   <ReactHlsPlayer
@@ -61,7 +61,7 @@ The `playerRef` returns a ref to the underlying video component, and as such wil
 
 ```javascript
 import React from 'react';
-import ReactHlsPlayer from '@gumlet/react-player-hls';
+import ReactHlsPlayer from '@gumlet/react-hls-player';
 
 function MyCustomComponent() {
   const playerRef = React.useRef();
@@ -93,7 +93,7 @@ You can also listen to events of the video
 
 ```javascript
 import React from 'react';
-import ReactHlsPlayer from '@gumlet/react-player-hls';
+import ReactHlsPlayer from '@gumlet/react-hls-player';
 
 function MyCustomComponent() {
   const playerRef = React.useRef();
