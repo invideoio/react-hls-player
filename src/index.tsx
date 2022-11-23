@@ -2,16 +2,24 @@ import React, { useEffect, RefObject } from 'react';
 import Hls from 'hls.js';
 import Config from 'hls.js';
 
+declare const window: Window &
+  typeof globalThis & {
+    Hls: any
+  }
+
+
 export interface HlsPlayerProps
   extends React.VideoHTMLAttributes<HTMLVideoElement> {
   hlsConfig?: Config;
   playerRef: RefObject<HTMLVideoElement>;
+  getHLSRef?: (hlsObj: Hls) => void;
   src: string;
 }
 
 function ReactHlsPlayer({
   hlsConfig,
   playerRef = React.createRef<HTMLVideoElement>(),
+  getHLSRef,
   src,
   autoPlay,
   ...props
@@ -24,10 +32,16 @@ function ReactHlsPlayer({
         hls.destroy();
       }
 
+      window.Hls = Hls;
+
       const newHls = new Hls({
         enableWorker: false,
         ...hlsConfig,
       });
+
+      if (getHLSRef) {
+        getHLSRef(newHls);
+      }
 
       if (playerRef.current != null) {
         newHls.attachMedia(playerRef.current);
@@ -78,7 +92,7 @@ function ReactHlsPlayer({
         hls.destroy();
       }
     };
-  }, [autoPlay, hlsConfig, playerRef, src]);
+  }, [autoPlay, hlsConfig, playerRef, getHLSRef, src]);
   // If Media Source is supported, use HLS.js to play video
   if (Hls.isSupported()) return <video ref={playerRef} {...props} />;
   // Fallback to using a regular video player if HLS is supported by default in the user's browser

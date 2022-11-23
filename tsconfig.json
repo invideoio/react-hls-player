@@ -9,7 +9,7 @@
     "removeComments": true,
     "jsx": "react",
     "strict": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "allowJs": true,
     "skipLibCheck": true,
     "strictNullChecks": true

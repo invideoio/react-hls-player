@@ -81,6 +81,7 @@ function MyCustomComponent() {
   return (
     <ReactHlsPlayer
       playerRef={playerRef}
+      setHLSRef={(hlsJSObject) => { console.log(hlsJSObject); }}
       src="https://video.gumlet.io/5f462c1561cf8a766464ffc4/635789f017629894d4d125a4/main.m3u8"
     />
   );
@@ -142,7 +143,15 @@ All [video properties](https://www.w3schools.com/tags/att_video_poster.asp) are 
 | height `Number`          | Video height. Defaults to `auto`                                                                                        |
 | hlsConfig `Object`       | `hls.js` config, you can see all config [here](https://github.com/video-dev/hls.js/blob/master/docs/API.md#fine-tuning) |
 | playerRef `React Ref`    | Pass in your own ref to interact with the video player directly. This will override the default ref.                    |
+| getHLSRef `HLS Object Ref`| Get the HLS player object reference in a callback, as soon as the player object is defined.                    |
 
+
+
+## Maintainer
+
+This library is maintained by <a href="https://www.gumlet.com" target="_blank">Gumlet.com</a>
+
+[<img src="https://assets.gumlet.com/public/img/logo.png" width="300px">](https://www.gumlet.com)
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
