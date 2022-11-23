@@ -81,7 +81,7 @@ function MyCustomComponent() {
   return (
     <ReactHlsPlayer
       playerRef={playerRef}
-      setHLSRef={(hlsJSObject) => { console.log(hlsJSObject); }}
+      getHLSRef={(hlsJSObject) => { console.log(hlsJSObject); }}
       src="https://video.gumlet.io/5f462c1561cf8a766464ffc4/635789f017629894d4d125a4/main.m3u8"
     />
   );
