@@ -143,7 +143,7 @@ All [video properties](https://www.w3schools.com/tags/att_video_poster.asp) are 
 | height `Number`          | Video height. Defaults to `auto`                                                                                        |
 | hlsConfig `Object`       | `hls.js` config, you can see all config [here](https://github.com/video-dev/hls.js/blob/master/docs/API.md#fine-tuning) |
 | playerRef `React Ref`    | Pass in your own ref to interact with the video player directly. This will override the default ref.                    |
-| getHLSRef `HLS Object Ref`| Get the HLS player object reference in a callback, as soon as the player object is defined.                    |
+| getHLSRef `Callback`     | Get the HLS player object reference in a callback, as soon as the player object is defined.                    |
 
 
 
