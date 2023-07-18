@@ -6,14 +6,12 @@ function App() {
   const playerRef = useRef<HTMLVideoElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [hlsUrl, setHlsUrl] = useState(
-    'https://video.gumlet.io/5f462c1561cf8a766464ffc4/635789f017629894d4d125a4/main.m3u8'
+    'http://localhost:4000/export/stream/playlist.m3u8?export_id=8c213931-35ee-419e-88b9-29a3c95e5249&region=us-west-2&key=exports%2Fc0a42a59-8cf5-41b2-ad86-4622216a8337%2Fc0a42a59-8cf5-41b2-ad86-4622216a8337&bucket=iv-stage-pro-dev'
   );
   const [destroy, setDestroy] = useState(false);
 
   function _handleEnter(e: React.KeyboardEvent) {
-    if (e.keyCode === 13) {
-      setHlsUrl(inputRef?.current?.value ?? '');
-    }
+    setHlsUrl(inputRef?.current?.value ?? '');
   }
 
   function _handleDestroyClick() {
@@ -68,6 +66,27 @@ function App() {
           autoPlay
           playerRef={playerRef}
           src={hlsUrl}
+          hlsConfig={
+            {
+              fragLoadPolicy: {
+                default: {
+                  maxTimeToFirstByteMs: 10000,
+                  maxLoadTimeMs: 120000,
+                  timeoutRetry: {
+                    maxNumRetry: 4,
+                    retryDelayMs: 5000,
+                    maxRetryDelayMs: 5000,
+                  },
+                  errorRetry: {
+                    maxNumRetry: 6,
+                    retryDelayMs: 5000,
+                    maxRetryDelayMs: 8000,
+                  },
+                },
+                backoff: 'exponential',
+              },
+            } as any
+          }
         />
       ) : null}
 

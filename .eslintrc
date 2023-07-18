@@ -21,7 +21,11 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
   "settings": {
     "react": {
       "version": "detect"
@@ -32,18 +36,27 @@
     "react/prop-types": 0,
     "react-hooks/exhaustive-deps": "warn",
     "jsx-a11y/media-has-caption": "off",
-    "prettier/prettier": [
+    "prettier/prettier": [],
+    "no-irregular-whitespace": "off",
+    "indent": [
       "error",
+      2,
       {
-        "endOfLine": "crlf"
+        "SwitchCase": 1
       }
     ],
-    "no-irregular-whitespace": "off",
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "linebreak-style": ["error", "windows"],
-    "semi": ["error", "always"],
-    "eol-last": ["error", "always"],
-    "quotes": ["error", "single"],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
     "prefer-const": [
       "error",
       {
