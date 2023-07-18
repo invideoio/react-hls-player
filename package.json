@@ -58,6 +58,6 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "hls.js": "git+https://github.com/invideoio/hls.js.git#2e5fcc4"
+    "hls.js": "git+https://github.com/invideoio/hls.js.git#1ef1fe4"
   }
 }
