@@ -1,6 +1,6 @@
 {
   "name": "@gumlet/react-hls-player",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Component for video playback using HLS.js in react",
   "main": "./dist/index.js",
   "types": "./dist",
